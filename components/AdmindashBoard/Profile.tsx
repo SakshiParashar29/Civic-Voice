@@ -31,7 +31,7 @@ const Profile = () => {
                 const token = localStorage.getItem("token");
                 if (!token) return;
 
-                const res = await fetch("http://localhost:3000/api/user/profile", {
+                const res = await fetch("https://civic-voice-tiv6.vercel.app/api/user/profile", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 const data = await res.json();
@@ -46,7 +46,7 @@ const Profile = () => {
             const token = localStorage.getItem("token");
             if (!token) return;
 
-            const res = await fetch("http://localhost:3000/api/user/complaints/getStats", {
+            const res = await fetch("https://civic-voice-tiv6.vercel.app/api/user/complaints/getStats", {
               headers: { Authorization: `Bearer ${token}` },
             });
             const data = await res.json();

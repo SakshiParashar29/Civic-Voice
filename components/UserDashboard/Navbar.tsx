@@ -14,12 +14,6 @@ import {
   FaBell 
 } from "react-icons/fa";
 
-import { 
-  LayoutGrid, 
-  BarChart3, 
-  ClipboardList 
-} from "lucide-react";
-
 const Navbar = () => {
   const { darkMode, toggletheme } = useTheme();
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -43,25 +37,6 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center gap-8">
-
-        
-        {/* <Link href="/UserDashBoard" className={isActive("/UserDashBoard") ? activeClass : inactiveClass}>
-          <LayoutGrid />
-          Dashboard
-        </Link>
-
-        
-        <a href="#complaintList" className={isActive("/ComplaintList") ? activeClass : inactiveClass}>
-          <ClipboardList/>
-          ComplaintList
-        </a>
-
-    
-        <Link href="/Statistics" className={isActive("/Statistics") ? activeClass : inactiveClass}>
-          <BarChart3/>
-          Statistics
-        </Link> */}
-
         {/* Theme toggle */}
         <span onClick={toggletheme} className="cursor-pointer">
           {darkMode ? (
@@ -88,18 +63,6 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileMenu && (
         <div className="absolute top-12 right-0 w-full bg-white dark:bg-gray-900 shadow-lg p-6 flex flex-col gap-6 md:hidden">
-
-          {/* <Link href="/UserDashBoard" className={isActive("/UserDashBoard") ? activeClass : inactiveClass}>
-            Dashboard
-          </Link>
-
-          <Link href="/ComplaintList" className={isActive("/ComplaintList") ? activeClass : inactiveClass}>
-            ComplaintList
-          </Link>
-
-          <Link href="/Statistics" className={isActive("/Statistics") ? activeClass : inactiveClass}>
-            Statistics
-          </Link> */}
 
           {/* theme */}
           <div onClick={toggletheme} className="flex gap-4 items-center cursor-pointer">

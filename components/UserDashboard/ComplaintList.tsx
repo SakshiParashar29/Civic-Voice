@@ -8,7 +8,7 @@ const ComplaintList = () => {
 
   const fetchComplaints = async () => {
     const token = localStorage.getItem("token");
-    const response = await fetch("http://localhost:3000/api/user/complaints/all", {
+    const response = await fetch("https://civic-voice-tiv6.vercel.app/api/user/complaints/all", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const ComplaintList = () => {
         return;
       }
       const response = await fetch(
-        `http://localhost:3000/api/user/complaints/upvote?id=${complaintId}`,
+        `https://civic-voice-tiv6.vercel.app/api/user/complaints/upvote?id=${complaintId}`,
         {
           method: "PATCH",
           headers: {
@@ -79,7 +79,6 @@ const ComplaintList = () => {
         return;
       }
 
-      // alert("Upvoted Successfully");
       fetchComplaints();
       setLoadingUpvote(null);
     } catch (error) {

@@ -21,7 +21,7 @@ const ComplaintForm = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/api/user/complaints/submit",
+        "https://civic-voice-tiv6.vercel.app/api/user/complaints/submit",
         {
           method: "POST",
           headers: {
