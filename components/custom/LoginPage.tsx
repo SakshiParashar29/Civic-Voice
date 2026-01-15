@@ -66,6 +66,22 @@ const LoginPage = () => {
         <button type="submit" className="bg-orange-500 hover:bg-orange-600 rounded-md cursor-pointer px-4 py-2 font-semibold text-center text-white text-xl shadow-md">Login</button>
 
         <p className="text-center mt-2">Don't have an account?? <Link href="/SignUp" className="text-blue-600 font-semibold">SignUp!</Link></p>
+
+        {/* Demo credentials */}
+        <div className="flex gap-5 content-center text-gray-400 text-sm mt-3 mx-auto">
+          <div className="border p-3 rounded">
+            <p className="font-semibold">Admin Account</p>
+            <p>Username: <span>admin</span></p>
+            <p>Password: <span className="italic">12345678</span></p>
+          </div>
+
+          <div className="border p-3 rounded">
+            <p className="font-semibold">User Account</p>
+            <p>Username: <span>user1</span></p>
+            <p>Password: <span className="italic">12345678</span></p>
+          </div>
+        </div>
+
       </form>
     </div>
   );
